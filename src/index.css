@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(242, 235, 235);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.wrapper{
+    width: 1280px;
+    margin: 50px auto;
+}
+
+header {
+    position: relative;
+}
+
+header .logo{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+header .shopping-button {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 500ms ease;
+}
+
+header .shop-cart {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 450px;
+    min-height: 50px;
+    background: #fafafa;
+    box-shadow: 9px 9px 16px 8px rgba(0,0,0,0.36);
+    -webkit-box-shadow: 9px 9px 16px 8px rgba(0,0,0,0.36);
+    -moz-box-shadow: 9px 9px 16px 8px rgba(0,0,0,0.36);
+    z-index: 1000;
+
+    
+}
+
+header .shop-cart .sum {
+    padding: 15px;
+    font-weight: 600;
+    float: right;
+}
+
+header .shop-cart .item {
+    width: 100%;
+    float: left;
+    margin: 15px;
+}
+
+header .shop-cart .item img {
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-right: 15px;
+}
+
+header .shop-cart .item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+header .shop-cart .item p {
+    font-weight: 600;
+    color: #408c11;
+}
+
+header .shop-cart .item .delet-icon {
+    color: #bf1d1d;
+    float: right;
+    cursor: pointer;
+    position: relative;
+    top: -25px;
+    right: 30px;
+    transition: transform 500ms ease;
+}
+
+header .shop-cart .item .delet-icon:hover {
+    color: red;
+    transform: scale(1.5);
+}
+
+header .nav {
+    float: right;
+    list-style: none;
+}
+
+header .nav li {
+    display: inline;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+}
+
+header .shopping-button:hover,
+header .shopping-button.activ{
+    color: red;
+    transform: scale(1.5);
+}
+
+header .nav li:hover {
+    opacity: 0.5;
+    color: red;
+}
+
+header .presentation {
+    background: url('./photo/3.png') no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-color: #bcbcbc;
+    position: relative;
+    margin: 50px 0;
+}
+
+header .presentation::after {
+    content: 'Лутчшие товары для вашего дома';
+    color: snow;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 300px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+header .presentation::before {
+    content: 'по низким ценам';
+    color: snow;
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    width: 300px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.full-item {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow: auto;
+}
+
+.full-item > div {
+    width: 600px;
+    position: relative;
+    background: #fff;
+    margin: 10% auto;
+    padding: 40px 30px;
+    border-radius: 9px;
+
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main .item {
+    width: 30%;
+    margin-bottom: 50px;
+    background: #f5f5f5;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+main .item img, .full-item img {
+    width: 100%;
+    height: 80%;
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
+
+main .item img:hover,
+.full-item img:hover {
+    transform: scale(1.05);
+}
+
+main h2, .full-item h2,
+main p, .full-item p, 
+main b, .full-item b {
+    margin: 10px 20px;
+}
+
+main b, .full-item b {
+    color: green;
+}
+
+main .add-to-item,
+.full-item .add-to-item {
+    position: absolute;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    background: #bf1d1d;
+    color: #cfcaca;
+    text-align: center;
+    line-height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 500ms ease;
+}
+
+main .add-to-item:hover,
+.full-item .add-to-item:hover {
+    transform: scale(1.25);
+}
+
+footer {
+    text-align: center;
+}
